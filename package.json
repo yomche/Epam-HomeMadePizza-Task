@@ -1,0 +1,22 @@
+{
+  "name": "home-made-pizza",
+  "version": "1.0.0",
+  "description": "EPAM students practice",
+  "scripts": {
+    "start:ui-kit": "cd ui-kit && npm start",
+    "start:pizza-app": "cd pizza-app && npm start",
+    "build:ui-kit": "cd ui-kit && npm run build",
+    "build:watch": "cd ui-kit && npm run build:watch",
+    "setup": "cd ui-kit && npm i && npm run build && cd ../pizza-app && npm i"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rmlysov/home-made-pizza.git"
+  },
+  "author": "Roman Lysov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rmlysov/home-made-pizza/issues"
+  },
+  "homepage": "https://github.com/rmlysov/home-made-pizza#readme"
+}

@@ -1,0 +1,18 @@
+{
+    "extends": ["airbnb", "prettier", "prettier/react", "react-app"],
+    "rules": {
+        "indent": ["error", "tab", { "VariableDeclarator": 2, "SwitchCase": 1 }],
+        "no-tabs": "off",
+        "semi-style": ["error", "last"],
+        "import/prefer-default-export": "off",
+        "react/jsx-indent": [2, "tab", {"checkAttributes": true, "indentLogicalExpressions": true}],
+        "react/jsx-indent-props": [2, "tab"],
+        "operator-linebreak": "off",
+        "react/prop-types": "off",
+        "no-nested-ternary": "off"
+    },
+    "plugins": ["react", "react-hooks", "prettier"],
+    "env": {
+        "browser": true
+    }
+}
