@@ -1,7 +1,6 @@
 import React, { memo } from 'react';
-import { StyledHeader } from './header.styles';
+import { StyledHeader, StyledButton, StyledMenu, StyledText } from './header.styles';
 import { StyledHeaderLogo } from '../logo/logo.styles';
-import { StyledButton, StyledMenu, StyledText } from '../menu/menu.styles';
 
 const HeaderComponent = () => (
 	<StyledHeader>

@@ -4,14 +4,14 @@ import { StyledAppContainer } from './app.styles';
 import { Header } from './header/header.component';
 import { Menu } from './main_menu/main_menu.component';
 import { About } from './about/about.component';
+import { Warn } from './warn/warn.component';
+import { Contacts } from './contacts/contacts.component';
 
 export class App extends React.Component {
-	// инициализировать объект state для управления данными о всех загруженных товарах
+	// инициализировать объект state для управления данными о всех загруженных товарах и товарах в корзине
 	constructor(props) {
 		super(props);
-		this.state = {
-			cart: [],
-		};
+		this.state = { productsItems: [], pizzaItems: [], drinksItems: [] };
 	}
 
 	// наполнить state mock-данными о всех товарах в componentDidMount
@@ -19,7 +19,7 @@ export class App extends React.Component {
 		console.log('componentDidMount');
 		console.log(this.state);
 		this.setState((state) => ({
-			cart: [
+			pizzaItems: [
 				{
 					type: 'pizza',
 					count: 1,
@@ -72,6 +72,10 @@ export class App extends React.Component {
 						carb: 21.9,
 					},
 				},
+			],
+		}));
+		this.setState((state) => ({
+			drinksItems: [
 				{
 					type: 'drink',
 					count: 1,
@@ -110,8 +114,54 @@ export class App extends React.Component {
 				},
 			],
 		}));
+		/* getJson('http://localhost:8080/GetProducts ').then((data) => {
+			this.setState({ products: data.map((number) => number.id) });
+		});
 		console.log(this.state);
+		*/
 	}
+
+	componentDidUpdate() {
+		console.log('componentDidUpdate');
+	}
+
+	addToBasket(data) {
+		const { drinksItems, pizzaItems, productsItems } = this.state;
+		switch (data) {
+			case '0':
+				return pizzaItems.push(productsItems[0].id);
+			case '1':
+				return pizzaItems.push(productsItems[1].id);
+			case '2':
+				return pizzaItems.push(productsItems[2].id);
+			case '3':
+				return pizzaItems.push(productsItems[3].id);
+			case '4':
+				return drinksItems.push(productsItems[4].id);
+			case '5':
+				return drinksItems.push(productsItems[5].id);
+			case '6':
+				return drinksItems.push(productsItems[6].id);
+			case '7':
+				return drinksItems.push(productsItems[7].id);
+			default:
+				return 0;
+		}
+	}
+
+	/*
+	newOrder(order, name, address, telephone, paymethod) {
+		const {} = this.state;
+		console.log({ order, name, address, telephone, paymethod });
+		postJson('http://localhost:8080/CreateOrderDto', {
+			productId: order,
+			clientName: name,
+			phoneNumber: address,
+			address: telephone,
+			payMethod: paymethod,
+		});
+	}
+	*/
 
 	render() {
 		return (
@@ -120,6 +170,7 @@ export class App extends React.Component {
 					<Header />
 					<Menu />
 					<About />
+					<Contacts />
 				</StyledAppContainer>
 			</Router>
 		);

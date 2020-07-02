@@ -1,13 +1,3 @@
-import {
-	meatPizzaImageUrl,
-	cheesePizzaImageUrl,
-	classPizzaImageUrl,
-	calzoneImageUrl,
-	fruitDrinkImageUrl,
-	gasDrinkImageUrl,
-	stillWaterImageUrl,
-} from './images';
-
 export const pizzaItems = [
 	{
 		type: 'pizza',
@@ -20,7 +10,6 @@ export const pizzaItems = [
 			fat: 10,
 			carb: 80,
 		},
-		image: meatPizzaImageUrl,
 	},
 	{
 		type: 'pizza',
@@ -33,7 +22,6 @@ export const pizzaItems = [
 			fat: 10,
 			carb: 90,
 		},
-		image: classPizzaImageUrl,
 	},
 	{
 		type: 'pizza',
@@ -46,7 +34,6 @@ export const pizzaItems = [
 			fat: 20,
 			carb: 70,
 		},
-		image: cheesePizzaImageUrl,
 	},
 	{
 		type: 'pizza',
@@ -59,7 +46,6 @@ export const pizzaItems = [
 			fat: 5,
 			carb: 60,
 		},
-		image: calzoneImageUrl,
 	},
 ];
 
@@ -70,7 +56,6 @@ export const drinksItems = [
 		title: 'Домашний морс',
 		price: 99,
 		description: '',
-		image: fruitDrinkImageUrl,
 	},
 	{
 		type: 'drink',
@@ -78,7 +63,6 @@ export const drinksItems = [
 		title: 'Газировка',
 		price: 99,
 		description: '',
-		image: gasDrinkImageUrl,
 	},
 	{
 		type: 'drink',
@@ -86,7 +70,6 @@ export const drinksItems = [
 		title: 'Минеральная вода',
 		price: 49,
 		description: '',
-		image: stillWaterImageUrl,
 	},
 ];
 
